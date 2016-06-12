@@ -8,34 +8,122 @@
 <body>
     <header class="black">
     	<div class="container">
-    		<span class="left logo">Logo</span>
-    		<nav class="right navbar">
-    			<li>start</li>
-    			<li>o nas</li>
-    			<li>kontakt</li>
+    		<h1 class="left logo"/>SIT <span class="green">ON</span> CHAIR</h1>
+    		<nav class="right">
+    			<li class="navbar">
+                    o firmie
+                    <ul>
+                        <li class="dropdown">Aktualności</li>
+                        <li class="dropdown">Nasz team</li>
+                        <li class="dropdown">Historia</li>
+                    </ul>
+                </li>
+    			<li class="navbar">galeria</li>
+    			<li class="navbar">kontakt</li>
     		</nav>
     	</div>
     </header>
-    <section id="main-section">
+    <section id="slider">
     	<div class="container">
-    		<div id="img" class="left"></div>
-    		<div id="text">
-    			<h1>tytuł strony</h1>
-    			<p>Choclate bar topping marzipan ice cream. Chupa chups cookie bar bear claw pie ice cream. Sugar plum cheescake halvah cake wafer tart fruitcake cheescake.</p>
+    		<div class="slider-img left"><img src="Sit_on_chair_template_OBOWIAZKOWE/images/black_chair.png"/></div>
+    		<div class="slider-text right">
+    			<h1>Sit <span class="green">on</span> our <span class="green">chair</span></h1>
+    			<p>Choclate bar topping marzipan ice cream. Chupa chups cookie bar bear claw pie ice cream. Sugar plum cheescake halvah cake wafer tart fruitcake cheescake. Choclate bar topping marzipan ice cream. Chupa chups cookie bar bear claw pie ice cream. Sugar plum cheescake halvah cake wafer tart fruitcake cheescake.</p>
+                <button class="slider-button">zobacz więcej</button>
     		</div>
     	</div>
     </section>
-    <section id="gallery" class="black left">
+    <section id="gallery">
     	<div class="container">
-    		<div class="gallery-img left"></div>
-    		<div id="middle" class="gallery-img left"></div>
-    		<div class="gallery-img left"></div>
+    		<div id="first-img" class="gallery-box left">
+                <div class="transparent">
+                    <h4 class="green-underline">Chair CLAIR</h4>
+                </div>      
+            </div>
+    		<div id="middle-img" class="gallery-box left">
+                <div class="transparent">
+                    <h4 class="green-underline">Chair MARGARITA</h4>
+                </div>   
+            </div>
+    		<div class="gallery-box left">
+                <h4 class="green-underline" id="third-h4">Finds all inputs</h4>
+                <p>
+                Finds all inputs that are not checked and highlights the next sibling span. Notice there is no change when clicking the checkboxes since no click events have been linked.<br><br>Notice there is no change when clicking the checkboxes since no click events have been linked.
+                </p>
+            </div> 
     	</div>
     </section>
+    <section id="cennik">
+        <div class="container">
+            <h2 class="green-underline section-h">cennik</h1>
+            <div class="cennik-box hover-green">
+                <div class="cennik-top-circle hover-green"></div>
+                <h3 class="cennik-h3 hover-green">BASIC PLAN</h3>
+                <div class="cennik-circle">
+                    <p><span class="txt-big">85</span><sup>99</sup><br>pln/msc</p>
+                </div>
+                <p>Zakup towaru + dowóz</p>
+                <p>Serwis</p>
+                <button class="cennik-button">dołącz &gt;</button>
+            </div>
+            <div class="cennik-box hover-green">
+                <div class="cennik-top-circle hover-green"></div>
+                <h3 class="cennik-h3 hover-green">STANDARD PLAN</h3>
+                <div class="cennik-circle">
+                    <p><span class="txt-big">95</span><sup>99</sup><br>pln/msc</p>
+                </div>
+                <p>Zakup towaru + dowóz</p>
+                <p>Serwis</p>
+                <p>Gwarancja 5 lat</p>
+                <button class="cennik-button">dołącz &gt;</button>
+            </div>
+            <div class="cennik-box hover-green">
+                <div class="cennik-top-circle hover-green"></div>
+                <h3 class="cennik-h3 hover-green">ADVANCE PLAN</h3>
+                <div class="cennik-circle">
+                    <p><span class="txt-big">211</span><sup>00</sup><br>pln/msc</p>
+                </div>
+                <p>Zakup towaru + dowóz</p>
+                <p>Serwis</p>
+                <p>Gwarancja 6 lat</p>
+                <p>Porady projektanta</p>
+                <button class="cennik-button">dołącz &gt;</button>
+            </div>
+        </div>
+    </section>
+    <section id="kontakt">
+        <div class="container">
+            <h2 class="green-underline section-h">kontakt</h2>
+            <form>
+                <div class="left two-third">
+                    <input type="text" name="name" placeholder="Imię"/>
+                    <input type="text" name="email" placeholder="email"/>
+                    <textarea type="" name="" placeholder="Wiadomość"></textarea>
+                </div>
+                <div class="right one-third" id="sumbit-parent">
+                    <img src="Sit_on_chair_template_OBOWIAZKOWE/images/red_chair.png">
+                    <div>
+                        <input type="checkbox" name="checkbox" id="checkbox"/>
+                        <label for="checkbox"><span></span></label>
+                        <span id="agreement">Zgadzam sie na przetwarzanie danych osobowych</span>
+                    </div>
+                    <input type="button" id="submit" value="Wyślij"/>
+                </div>
+            </form>
+        </div>
+    </section>
     <footer>
-    	<div class="container footer">
-    		<span class="left">2015 Coders Lab</span>
-    		<span class="right">Logo</span>
+    	<div class="container">
+    		<div class="left half">Copyright 2014 | All Rights Reserved. – Sit On Chair</div>
+            <div class="right">
+                <div class="right" id="socials">
+                    <a href="#"><img class="icon left" id="flickr" src="Sit_on_chair_template_OBOWIAZKOWE/images/flickr.png"/></a>
+                    <a href="#"><img class="icon left" id="vimeo" src="Sit_on_chair_template_OBOWIAZKOWE/images/vimeo.png"/></a>
+                    <a href="#"><img class="icon left" id="pinterest" src="Sit_on_chair_template_OBOWIAZKOWE/images/pinterest.png"/></a>
+                    <a href="#"><img class="icon left" id="twitter" src="Sit_on_chair_template_OBOWIAZKOWE/images/twitter.png"/></a>
+                    <p class="left">sit <span>on</span> chair</p>
+                </div>
+            </div>
     	</div>
     </footer>
 </body>
