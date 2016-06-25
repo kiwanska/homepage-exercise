@@ -4,10 +4,6 @@
 	font-size: 14px;
 }
 
-/*#main-section, footer {
-	padding: 10px 0px;
-}*/
-
 .black {
 	width: 100%;
 	background-color: black;
@@ -19,8 +15,7 @@
 	max-width: 1050px;
 	position: relative;
 	margin: auto;
-	overflow: auto;
-}
+	overflow: auto;}
 
 .left {
 	float: left;
@@ -33,6 +28,9 @@
 header {
 	font-size: 14px;
 	line-height: 40px;
+	position: relative;
+	z-index: 100;
+	overflow: none;
 }
 
 .logo {
@@ -41,12 +39,14 @@ header {
 
 li.navbar {
 	font-weight: 700;
+	height: 40px;
 	width: 120px;
 	text-align: center;
 	text-transform: uppercase;
 	float: left;
 	list-style-type: none;
-
+	z-index: 1000;
+	padding-bottom: 10px;
 }
 
 li.navbar:hover {
@@ -54,24 +54,116 @@ li.navbar:hover {
 }
 
 .green {
-	color: #57d3be !important;
+	color: #57d3be;
 	font-weight: 700;
 	font-size: inherit;
 }
 
-li.dropdown {
-	display: none;
+#nav-item-dropdown:hover .dropdown-menu {
+	opacity: 1 !important;
+}
+
+#nav-item-dropdown:hover #arrow-up{
+	opacity: 1;
+}
+
+li.navbar:hover #arrow-up{
+	opacity: 1;
+}
+
+li.navbar:hover .dropdown-menu {
+	opacity: 1;
+}
+
+header * {
+	overflow: visible !important;
+	height: 40px;
+}
+
+#nav-item-dropdown {
+	position: absolute;
+	top: 40px;
+	right: 235px;
+	z-index: 10000;
+	width: 130px;
+}
+
+.dropdown-menu li{
+	display: block;
+	float: none;
+	list-style-type: none;
+}
+
+.dropdown-menu {
+	position: relative;
+	z-index: 100000;
+	width: 130px;
+	height: 120px;
+  	background-color: black;
+  	text-align: center;
+  	padding: 0;
+  	list-style-type: none;
+  	display: block;
+  	opacity: 0;
+}
+
+.dropdown-menu:hover{
+	display: block;
+}
+
+.dropdown-menu-item:hover {
+  	background-color: #ccc;
+  	display: block;
+}
+
+.dropdown-menu-item>a {
+	text-decoration: none;
+	color: white;
+	text-transform: none;
+}
+
+#arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+  position: relative;
+  left: 60px;
+  opacity: 0;
 }
 
 #slider {
 	width: 100%;
 	height: 500px;
 	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 73%,rgba(0,0,0,0.15) 100%);
+	z-index: 1;
+}
+
+.next,.prev {
+	margin-top: 200px;
+	font-size: 60px;
+	color: #57d3be;
+	cursor: pointer;
 }
 
 .slider-img {
-	padding: 50px 0px;
-	width: 33%;
+	padding: 70px 0px;
+	width: 25%;
+/*	position: relative;
+	right: 30px;*/
+}
+
+.slider-img ul{
+    list-style: none;
+}
+
+.slider-img li{
+    display: none;
+}
+
+.slider-img .visible{
+    display: inline-block;
 }
 
 .slider-text {
@@ -144,14 +236,17 @@ div.slider-text h1 {
 	width: 100%;
 	height: 60px;
 	box-sizing: content-box;
-	margin-top: 150;
+	margin-top: 150px;
+}
+
+.hidden {
+	opacity: 0;
 }
 
 .green-underline {
 	border-color: #57d3be;
 	border-width: 0px 0px 7px 0px;
 	border-style: solid;
-
 }
 
 #gallery h4 {
@@ -217,6 +312,11 @@ div.cennik-box:nth-child(3) {
 	color: #57d3be;
 	font-weight: 400;
 	padding-bottom: 20px;
+}
+
+.cennik-box h3:hover {
+	color: white;
+
 }
 
 .cennik-box>p {
@@ -300,6 +400,140 @@ sup {
 
 .hover-green:hover {
 	background-color: #57d3be;
+	border-color: #57d3be;
+}
+
+.hover-green:hover h3 {
+	color: white;
+}
+
+.hover-green:hover button {
+	background-color: white;
+	color: #57d3be;
+}
+
+.hover-green:hover div.cennik-circle {
+	background-color: white;
+	color: #57d3be;
+	border-color: white;
+}
+
+.hover-green:hover div.cennik-top-circle {
+	background-color: white;
+	border-color: #57d3be;
+	box-shadow: 0px 0px 0px 2px #57d3be;
+}
+
+#twoje-krzeslo {
+	background-color: #f1f1f1;
+	padding-bottom: 50px;
+}
+
+#twoje-krzeslo h2.right {
+	text-align: right;
+}
+
+#twoje-krzeslo img {
+	width: 100%;
+	margin-top: 80px;
+}
+
+#twoje-krzeslo-middle {
+	width: 290px;
+}
+
+#summary {
+	background-color: white;
+	width: 100%;
+	height: 260px;
+	margin-top: 45px;
+}
+
+#your-chair {
+	color: grey;
+	margin: 10px;
+	border-right: 1px solid LightGrey;
+	width: 50%;
+	height: 180px;
+	display: inline-block;
+}
+
+#your-chair p {
+	font-size: 24px;
+	margin: 0 0 10px 0;
+}
+
+#your-chair p:first-child {
+	color: #57d3be;
+}
+
+#prices {
+	width: 150px;
+	text-align: right;
+	color: grey;
+	display: inline-block;
+}
+
+#prices p{
+	margin: 0 0 10px 0;
+	line-height: 30px;
+
+}
+
+#sum {
+	font-size: 20px;
+	line-height: 34px;
+	padding: 10px;
+	text-transform: uppercase;
+	border-top: 1px solid LightGrey;
+	margin: 10px;
+}
+
+#sum span {
+	float: right;
+	text-align: right;
+}
+
+#order-parent {
+	position: relative;
+}
+
+#order-button {
+	height: 65px;
+	width: 100%;
+	position: absolute;
+	bottom: -110px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #57d3be;
+	border-radius: 5px;
+	color: white;
+	font-size: 34px;
+	line-height: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+#order-checkbox {
+    display: none;
+}
+
+#order-checkbox + label.order span.order {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: url(../Sit_on_chair_template_OBOWIAZKOWE/images/form_ok.jpg) -50px top no-repeat;
+    margin: 50px 0 0 0;
+    padding: 0 !important;
+    float: left;
+    border: 1px solid #57d3be;
+    background-color: white;
+}
+
+#order-checkbox:checked + label.order span.order {
+    background: url(../Sit_on_chair_template_OBOWIAZKOWE/images/form_ok.jpg) left 5px no-repeat;
+    background-color: white;
 }
 
 #kontakt .section-h {
@@ -314,18 +548,27 @@ sup {
 	width: 35%;
 }
 
+#kontakt form>div>img {
+	margin-left: 45px;
+}
+
 input, textarea {
 	width: 100%;
 	border: 1px solid #57d3be;
 	box-sizing: border-box;
-	padding: 15px;
 	font-size: 33px;
 	font-weight: 300;
 	margin: 15px 0px;
 }
 
+textarea {
+	padding: 15px 0px 0px 15px;
+
+}
+
 input {
 	height: 65px;
+	padding: 0px 0px 0px 15px;
 }
 
 input:first-child {
@@ -343,10 +586,12 @@ textarea {
 
 #submit {
 	height: 65px;
-	width: 35%;
+	width: 100%;
 	position: absolute;
-	bottom: 0;
+	bottom: -110px;
+	left: 0;
 	right: 0;
+	margin: auto;
 	background-color: #57d3be;
 	border-radius: 5px;
 	color: white;
@@ -364,11 +609,11 @@ textarea {
 	border-radius: none;
 }*/
 
-input[type="checkbox"] {
+#checkbox {
     display: none;
 }
 
-input[type="checkbox"] + label span {
+#checkbox + label span {
     display: inline-block;
     width: 50px;
     height: 50px;
@@ -377,19 +622,28 @@ input[type="checkbox"] + label span {
     padding: 0 !important;
     float: left;
     border: 1px solid #57d3be;
+    background-color: white;
 }
 
-input[type="checkbox"]:checked + label span {
+#checkbox:checked + label span {
     background: url(../Sit_on_chair_template_OBOWIAZKOWE/images/form_ok.jpg) left 5px no-repeat;
 }
 
-#agreement {
+#agreement, #transport {
 	position: relative;
 	top: 50px;
 	left: 25px;
-	font-size: 20px;
 	font-weight: 300;
 	color: #aeaeae;
+}
+
+#agreement {
+	font-size: 20px;
+}
+
+#transport {
+	font-size: 33px;
+	line-height: 52px;
 }
 
 footer {

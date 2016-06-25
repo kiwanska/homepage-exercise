@@ -4,19 +4,29 @@
     <meta charset="UTF-8">
     <title>Sit on chair</title>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="./js/app.js"></script>
 </head>
 <body>
     <header class="black">
-    	<div class="container">
+    	<div class="container" id="abc">
     		<h1 class="left logo"/>SIT <span class="green">ON</span> CHAIR</h1>
     		<nav class="right">
     			<li class="navbar">
-                    o firmie
-                    <ul>
-                        <li class="dropdown">Aktualności</li>
-                        <li class="dropdown">Nasz team</li>
-                        <li class="dropdown">Historia</li>
-                    </ul>
+                    <a>o firmie</a>
+                    <div class="navbar" id="nav-item-dropdown">  
+                        <div id="arrow-up"></div>
+    				    <ul class="dropdown-menu">
+    				        <li class="dropdown-menu-item">
+    			        	    <a href="#">Aktualności</a>
+    			            </li>
+    			       	    <li class="dropdown-menu-item">
+    			            	<a href="#">Nasz team</a>
+    			            </li>
+    			        	<li class="dropdown-menu-item">
+    			            	<a href="#">Historia</a>
+    			        	</li>
+    			        </ul>
+                    </div>
                 </li>
     			<li class="navbar">galeria</li>
     			<li class="navbar">kontakt</li>
@@ -25,7 +35,19 @@
     </header>
     <section id="slider">
     	<div class="container">
-    		<div class="slider-img left"><img src="Sit_on_chair_template_OBOWIAZKOWE/images/black_chair.png"/></div>
+            <div class="left prev">&#60;</div>
+            <div class="right next">&#62;</div>
+    		<ul class="slider-img left">
+                <li>
+                    <img src="Sit_on_chair_template_OBOWIAZKOWE/images/black_chair.png"/>
+                </li>
+                <li>
+                    <img src="Sit_on_chair_template_OBOWIAZKOWE/images/red.png"/>
+                </li>
+                <li>
+                    <img src="Sit_on_chair_template_OBOWIAZKOWE/images/orange.png"/>
+                </li>
+            </ul>
     		<div class="slider-text right">
     			<h1>Sit <span class="green">on</span> our <span class="green">chair</span></h1>
     			<p>Choclate bar topping marzipan ice cream. Chupa chups cookie bar bear claw pie ice cream. Sugar plum cheescake halvah cake wafer tart fruitcake cheescake. Choclate bar topping marzipan ice cream. Chupa chups cookie bar bear claw pie ice cream. Sugar plum cheescake halvah cake wafer tart fruitcake cheescake.</p>
@@ -91,6 +113,50 @@
             </div>
         </div>
     </section>
+    <section id="twoje-krzeslo">
+        <div class="container">
+            <h2 class="green-underline section-h left">stwórz własne krzesło</h2>
+            <h2 class="green-underline section-h right">podsumowanie</h2>
+            <form class="left" id="form-order">
+                <div class="left one-third">
+                    <input list="types" name="chair-type" placeholder="Wybierz rodzaj">
+                    <datalist id="types" name="chair-type">
+                        <option value="Chair Clair">200 zł</option>
+                        <option value="Chair Margarita">210 zł</option>
+                        <option value="Chair Selena">220 zł</option>
+                    </datalist>
+                    <input list="colors" name="chair-color" placeholder="Wybierz kolor">
+                    <datalist id="colors" name="chair-color">
+                        <option value="czerwony">30 zł</option>
+                        <option value="czarny">50 zł</option>
+                        <option value="pomarańczowy">80 zł</option>
+                    </datalist>
+                    <input list="fabrics" name="chair-fabric" placeholder="Wybierz materiał">
+                    <datalist id="fabrics" name="chair-fabric">
+                        <option value="tkanina">50 zł</option>
+                        <option value="skóra">150 zł</option>
+                    </datalist>
+                    <input type="checkbox" name="order-checkbox" id="order-checkbox"/>
+                    <label for="order-checkbox" class="order"><span class="order"></span></label>
+                    <span id="transport">Transport&nbsp;&nbsp;&nbsp;<small>(80zł)</small></span>
+                </div>
+                <div class="left" id="twoje-krzeslo-middle">
+                    <img src="Sit_on_chair_template_OBOWIAZKOWE/images/red.png">
+                </div>
+                <div class="right one-third" id="order-parent">
+                    <div id="summary" class="right">
+                        <div id="your-chair">
+                            <p>Twój fotel</p>
+                        </div>
+                        <div id="prices">
+                        </div>
+                        <div id="sum">Suma</div>
+                    </div>
+                    <input type="button" name="order" value="Zamawiam" id="order-button">
+                </div>
+            </form>
+        </div>
+    </section>
     <section id="kontakt">
         <div class="container">
             <h2 class="green-underline section-h">kontakt</h2>
@@ -100,12 +166,12 @@
                     <input type="text" name="email" placeholder="email"/>
                     <textarea type="" name="" placeholder="Wiadomość"></textarea>
                 </div>
-                <div class="right one-third" id="sumbit-parent">
+                <div class="right one-third" id="submit-parent">
                     <img src="Sit_on_chair_template_OBOWIAZKOWE/images/red_chair.png">
                     <div>
                         <input type="checkbox" name="checkbox" id="checkbox"/>
                         <label for="checkbox"><span></span></label>
-                        <span id="agreement">Zgadzam sie na przetwarzanie danych osobowych</span>
+                        <span id="agreement">Zgadzam się na przetwarzanie danych osobowych</span>
                     </div>
                     <input type="button" id="submit" value="Wyślij"/>
                 </div>
