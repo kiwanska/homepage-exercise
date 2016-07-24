@@ -1,1 +1,3 @@
-# WAR_FRO_S_08-Warsztat
+# Sit on chair
+
+simple exercise in basic HTML5 and CSS3
